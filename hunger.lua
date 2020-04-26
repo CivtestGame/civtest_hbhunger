@@ -518,6 +518,7 @@ then
    hbhunger.register_food(       "farming:sorghum", 1.5, nil, nil, nil, nil, 10)
    hbhunger.register_food(          "farming:corn", 1.5, nil, nil, nil, nil, 10)
    hbhunger.register_food(        "farming:tomato", 1.5, nil, nil, nil, nil, 10)
+   hbhunger.register_food(         "farming:grape", 1.5, nil, nil, nil, nil, 10)
    hbhunger.register_food(       "farming:lettuce", 1.5, nil, nil, nil, nil, 10)
    hbhunger.register_food(          "farming:beet", 1.5, nil, nil, nil, nil, 10)
    hbhunger.register_food(       "mobs:rat_cooked", 2,   nil, nil, nil, nil, 10)
