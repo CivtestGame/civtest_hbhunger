@@ -33,6 +33,18 @@ function hbhunger.register_food(name, hunger_change, replace_with_item, poison, 
 	food[name].saturation_limit = saturation_limit
 end
 
+-- Register all stated foods as a food=1
+minetest.register_on_mods_loaded(function()
+      for k,v in pairs(food) do
+         local def = minetest.registered_items[k]
+         if def then
+            local groups = (def.groups and table.copy(def.groups)) or {}
+            groups.food = groups.food or 1
+            minetest.override_item(k, { groups = groups })
+         end
+      end
+end)
+
 function hbhunger.eat(hp_change, replace_with_item, itemstack, user, pointed_thing)
 	local item = itemstack:get_name()
 	local def = food[item]
